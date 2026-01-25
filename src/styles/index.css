@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   Base Styles & CSS Custom Properties
+   ============================================ */
+
+:root {
+  /* Brand Colors */
+  --color-brand-primary: #2563eb;
+  --color-brand-secondary: #1e40af;
+  --color-brand-light: #3b82f6;
+  
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-off-white: #f8fafc;
+  --color-light-gray: #e2e8f0;
+  --color-medium-gray: #64748b;
+  --color-dark-gray: #1e293b;
+  
+  /* Spacing */
+  --section-padding-y: 6rem;
+  --section-padding-x: 1.5rem;
+  --container-max-width: 80rem;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --section-padding-y: 8rem;
+  }
+}
+
+/* ============================================
+   Base Element Styles
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased text-neutral-darkGray bg-white;
+  font-feature-settings: 'liga' 1, 'kern' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  @apply outline-none ring-2 ring-brand-600 ring-offset-2;
+}
+
+/* ============================================
+   Custom Utility Classes
+   ============================================ */
+
+@layer utilities {
+  /* Gradient Backgrounds */
+  .gradient-animate {
+    background: linear-gradient(-45deg, #2563eb, #3b82f6, #1e40af, #2563eb);
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent;
+  }
+
+  /* Glassmorphism */
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Container */
+  .container-custom {
+    @apply mx-auto px-6 max-w-7xl;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+
+  /* Card Hover Effect */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-card-hover;
+  }
+
+  /* Hide scrollbar */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ============================================
+   Component Layer Styles
+   ============================================ */
+
+@layer components {
+  /* Button Base Styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-full font-semibold text-base;
+    @apply transition-all duration-300 transform;
+    @apply focus:outline-none focus:ring-4 focus:ring-opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-white text-brand-600 hover:bg-gray-50;
+    @apply shadow-lg hover:shadow-xl hover:scale-105;
+    @apply focus:ring-white;
+  }
+
+  .btn-secondary {
+    @apply btn bg-transparent border-2 border-white text-white;
+    @apply hover:bg-white hover:text-brand-600 hover:scale-105;
+    @apply focus:ring-white;
+  }
+
+  .btn-dark {
+    @apply btn bg-brand-600 text-white;
+    @apply hover:bg-brand-700 shadow-lg hover:shadow-xl hover:scale-105;
+    @apply focus:ring-brand-300;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-2xl p-8 shadow-card;
+    @apply transition-all duration-500;
+    @apply hover:-translate-y-2 hover:shadow-card-hover;
+  }
+
+  /* Section Title */
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-neutral-darkGray mb-6;
+  }
+
+  .section-subtitle {
+    @apply text-brand-600 font-semibold text-sm uppercase tracking-wider mb-4;
+  }
+
+  .section-description {
+    @apply text-neutral-mediumGray text-lg max-w-2xl mx-auto;
+  }
+}
+
+/* ============================================
+   Animation Classes (for non-Tailwind animations)
+   ============================================ */
+
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+.animate-delay-600 { animation-delay: 600ms; }
+
+/* Intersection Observer Animation Classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-on-scroll-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
