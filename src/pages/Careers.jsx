@@ -29,25 +29,22 @@ export default function Careers() {
             </div>
           ))}
         </div>
-        <form className="bg-white rounded-xl shadow p-8 max-w-xl mx-auto">
-          <h3 className="text-2xl font-semibold mb-4">Apply Now</h3>
-          <div className="mb-4">
-            <input type="text" name="name" placeholder="Your Name" required className="w-full border rounded p-2" />
-          </div>
-          <div className="mb-4">
-            <input type="email" name="email" placeholder="Your Email" required className="w-full border rounded p-2" />
-          </div>
-          <div className="mb-4">
-            <input type="text" name="linkedin" placeholder="LinkedIn Profile (optional)" className="w-full border rounded p-2" />
-          </div>
-          <div className="mb-4">
-            <input type="file" name="cv" accept=".pdf,.doc,.docx" className="w-full border rounded p-2" />
-          </div>
-          <div className="mb-4">
-            <textarea name="cover" placeholder="Cover Letter" rows={4} className="w-full border rounded p-2" />
-          </div>
-          <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded font-semibold">Submit Application</button>
-        </form>
+        <div className="max-w-2xl mx-auto bg-gradient-to-br from-blue-50 via-white to-blue-100 rounded-2xl shadow-2xl p-10 border border-blue-200">
+          <h3 className="text-3xl font-bold mb-6 text-blue-700">Apply to Join PixelMinds</h3>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScU43gABm9J61uFGSeEZFMlPn_kgFhbNsBlAhBsqfL427Sj9Q/viewform?embedded=true"
+            width="100%"
+            height="900"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
+            title="PixelMinds Careers Application"
+            style={{ border: 'none', width: '100%', minHeight: '900px', background: 'transparent' }}
+            allowFullScreen
+          >
+            Loading…
+          </iframe>
+        </div>
       </div>
     </section>
   );

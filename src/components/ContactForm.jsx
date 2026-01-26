@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from '@formspree/react';
 
 export default function ContactForm({ title = 'Request a Consultant' }) {
-  const [state, handleSubmit] = useForm("xwkzqgqv"); // Replace with your Formspree form ID if different
+  const [state, handleSubmit] = useForm("meeggbdj"); // Updated to correct Formspree form ID
 
   if (state.succeeded) {
     return <p className="mt-4 text-green-600">Thank you! We'll be in touch soon.</p>;

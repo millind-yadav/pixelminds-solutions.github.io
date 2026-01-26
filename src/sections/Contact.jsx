@@ -41,7 +41,7 @@ function Contact() {
             <div className="mb-2">Email: <a href="mailto:info@pixelminds.co.uk" className="underline">info@pixelminds.co.uk</a></div>
             {/*<div className="mb-2">Phone: <a href="tel:+442012345678" className="underline">+44 20 1234 5678</a></div>*/}
             <div className="mb-2">WhatsApp: <a href="https://wa.me/447823853633" target="_blank" rel="noopener" className="underline">Chat on WhatsApp</a></div>
-            <div className="mb-2">LinkedIn: <a href="https://linkedin.com/company/pixelminds" target="_blank" rel="noopener" className="underline">Follow us</a></div>
+            {/*<div className="mb-2">LinkedIn: <a href="https://linkedin.com/company/pixelminds" target="_blank" rel="noopener" className="underline">Follow us</a></div>*/}
             <div className="mb-2">Business Hours: Mon-Fri 9am-6pm (UK)</div>
             <div className="mb-2">Address: Bristol, UK</div>
             <div className="mb-4">
