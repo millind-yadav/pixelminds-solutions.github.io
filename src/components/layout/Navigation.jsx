@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { cn } from '@utils/cn';
 import { useScroll, useMobileMenu } from '@hooks';
 import { scrollToElement } from '@utils/scroll';
@@ -13,11 +14,20 @@ import { COMPANY } from '@constants';
 function Navigation() {
   const { isScrolled } = useScroll({ threshold: 50 });
   const { isOpen: isMobileMenuOpen, toggle: toggleMobileMenu, close: closeMobileMenu } = useMobileMenu();
+  const navigate = useNavigate();
 
-  const handleNavClick = useCallback((sectionId) => {
-    scrollToElement(sectionId, { offset: 80 });
+  const handleNavClick = useCallback((navIdOrHref) => {
+    // Find the nav item
+    const navItem = NAV_ITEMS.find(item => item.id === navIdOrHref);
+    if (navItem) {
+      if (navItem.href.startsWith('#')) {
+        scrollToElement(navItem.href.slice(1), { offset: 80 });
+      } else if (navItem.href.startsWith('/')) {
+        navigate(navItem.href);
+      }
+    }
     closeMobileMenu();
-  }, [closeMobileMenu]);
+  }, [closeMobileMenu, navigate]);
 
   return (
     <nav

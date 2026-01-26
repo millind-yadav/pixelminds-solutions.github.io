@@ -24,7 +24,7 @@ function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0f1a]">
-      {/* Animated Cascading Digital Pixel Background */}
+      {/* Animated Cascading if  Pixel Background */}
       <AnimatedBackground />
       
       {/* Subtle Geometric Overlays */}
