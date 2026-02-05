@@ -1,37 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="PixelMinds Solutions LTD - Innovating Digital Experiences. Technology consulting & digital solutions based in the United Kingdom." />
-    <meta name="keywords" content="AI, automation, mobile app development, cloud solutions, DevOps, business intelligence, UK tech company" />
-    <meta name="author" content="PixelMinds Solutions LTD" />
+    <meta
+      name="description"
+      content="PixelMinds Solutions LTD - Innovating Digital Experiences. Technology consulting & digital solutions based in the United Kingdom."
+    />
+    <meta
+      name="keywords"
+      content="AI, automation, mobile app development, cloud solutions, DevOps, business intelligence, UK tech company"
+    />
+    <meta name="author" content="PixelMinds Consultancy LTD" />
     <meta name="robots" content="index, follow" />
-    
+
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://pixelminds.co.uk/" />
     <meta property="og:title" content="PixelMinds Solutions LTD | Innovating Digital Experiences" />
-    <meta property="og:description" content="Technology consulting & digital solutions that transform businesses. AI, Cloud, Mobile Apps & More." />
+    <meta
+      property="og:description"
+      content="Technology consulting & digital solutions that transform businesses. AI, Cloud, Mobile Apps & More."
+    />
     <meta property="og:image" content="/og-image.png" />
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://pixelminds.co.uk/" />
-    <meta property="twitter:title" content="PixelMinds Solutions LTD | Innovating Digital Experiences" />
-    <meta property="twitter:description" content="Technology consulting & digital solutions that transform businesses. AI, Cloud, Mobile Apps & More." />
-    
+    <meta
+      property="twitter:title"
+      content="PixelMinds Solutions LTD | Innovating Digital Experiences"
+    />
+    <meta
+      property="twitter:description"
+      content="Technology consulting & digital solutions that transform businesses. AI, Cloud, Mobile Apps & More."
+    />
+
     <!-- Theme Color -->
     <meta name="theme-color" content="#2563eb" />
-    
+
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Umami Analytics -->
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="3bd5b171-729e-44fa-b975-dea8a6aed9ad"></script>
-    
+
+    <!-- Umami Analytics (loaded only after user consent) -->
+    <script>
+      (function () {
+        function loadUmami() {
+          if (document.getElementById('umami-script')) return;
+          var s = document.createElement('script');
+          s.defer = true;
+          s.id = 'umami-script';
+          s.src = 'https://cloud.umami.is/script.js';
+          s.setAttribute('data-website-id', '3bd5b171-729e-44fa-b975-dea8a6aed9ad');
+          document.head.appendChild(s);
+        }
+
+        function getCookie(name) {
+          var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+          return match ? decodeURIComponent(match[2]) : null;
+        }
+
+        // If consent was already given for all cookies, load analytics immediately
+        try {
+          var consent = getCookie('pm_consent');
+          if (consent === 'all') {
+            loadUmami();
+          }
+        } catch (e) {
+          // silent
+        }
+
+        // Expose loader so the React app can trigger analytics after consent
+        window.__pm_load_analytics = loadUmami;
+      })();
+    </script>
+
     <title>PixelMinds Solutions LTD | Innovating Digital Experiences</title>
   </head>
   <body>

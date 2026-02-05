@@ -1,16 +1,19 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from '@components/layout/Navigation';
 import Footer from '@components/layout/Footer';
+import CookieConsent from '@components/CookieConsent';
 import Hero from '@sections/Hero';
 import About from '@sections/About';
 import Services from '@sections/Services';
 import WhyChooseUs from '@sections/WhyChooseUs';
 import Contact from '@sections/Contact';
 import Careers from './pages/Careers';
+import Privacy from './pages/Privacy';
+import CookiePolicy from './pages/CookiePolicy';
 
 /**
  * Main Application Component
- * 
+ *
  * This is the root component that assembles all sections
  * of the PixelMinds Solutions website.
  */
@@ -21,19 +24,25 @@ function App() {
         <Navigation />
         <main>
           <Routes>
-            <Route path="/" element={
-              <>
-                <Hero />
-                <About />
-                <Services />
-                <WhyChooseUs />
-                <Contact />
-              </>
-            } />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <About />
+                  <Services />
+                  <WhyChooseUs />
+                  <Contact />
+                </>
+              }
+            />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
           </Routes>
         </main>
         <Footer />
+        <CookieConsent />
       </div>
     </Router>
   );

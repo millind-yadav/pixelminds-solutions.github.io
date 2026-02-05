@@ -1,6 +1,6 @@
 /**
  * Brand and Company Configuration
- * 
+ *
  * Centralized configuration for company branding, contact information,
  * and other business-related constants.
  */
@@ -9,7 +9,8 @@ export const COMPANY = {
   name: 'PixelMinds Consultancy',
   shortName: 'PixelMinds',
   tagline: 'Innovating Digital Experiences',
-  description: 'A UK-based technology consulting firm dedicated to transforming how businesses operate in the digital landscape.',
+  description:
+    'A UK-based technology consulting firm dedicated to transforming how businesses operate in the digital landscape.',
   founded: 2016,
   location: 'United Kingdom',
   website: 'https://pixelminds.co.uk',
@@ -23,7 +24,7 @@ export const CONTACT = {
     info: 'info@pixelminds.co.uk',
   },
   social: {
-    linkedin: 'https://linkedin.com/company/pixelminds-solutions',
+    linkedin: 'https://www.linkedin.com/company/pixelmindsconsultancy/',
     twitter: 'https://twitter.com/pixelminds',
     github: 'https://github.com/pixelminds-solutions',
   },

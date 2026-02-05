@@ -5,17 +5,14 @@ import ContactForm from '../components/ContactForm';
 
 /**
  * Contact/CTA Section Component
- * 
+ *
  * Call-to-action section with gradient background.
  */
 function Contact() {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.3 });
 
   return (
-    <section
-      id="contact"
-      className="py-24 md:py-32 gradient-animate relative overflow-hidden"
-    >
+    <section id="contact" className="py-24 md:py-32 gradient-animate relative overflow-hidden">
       {/* Background Elements */}
       <BackgroundElements />
 
@@ -33,15 +30,43 @@ function Contact() {
           </h2>
 
           <p className="text-xl text-white/90 mb-6 max-w-2xl mx-auto leading-relaxed">
-            Reach out for project enquiries, partnership opportunities, or to request a consultant. We're here to help you transform your business.
+            Reach out for project enquiries, partnership opportunities, or to request a consultant.
+            We&apos;re here to help you transform your business.
           </p>
 
           {/* Real Contact Info */}
           <div className="mb-8 text-white/80 text-lg">
-            <div className="mb-2">Email: <a href="mailto:info@pixelminds.co.uk" className="underline">info@pixelminds.co.uk</a></div>
+            <div className="mb-2">
+              Email:{' '}
+              <a href="mailto:info@pixelminds.co.uk" className="underline">
+                info@pixelminds.co.uk
+              </a>
+            </div>
             {/*<div className="mb-2">Phone: <a href="tel:+442012345678" className="underline">+44 20 1234 5678</a></div>*/}
-            <div className="mb-2">WhatsApp: <a href="https://wa.me/447823853633" target="_blank" rel="noopener" className="underline">Chat on WhatsApp</a></div>
-            {/*<div className="mb-2">LinkedIn: <a href="https://linkedin.com/company/pixelminds" target="_blank" rel="noopener" className="underline">Follow us</a></div>*/}
+            <div className="mb-2">
+              WhatsApp:{' '}
+              <a
+                href="https://wa.me/447823853633"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                Chat on WhatsApp
+              </a>
+            </div>
+            {
+              <div className="mb-2">
+                LinkedIn:{' '}
+                <a
+                  href="https://www.linkedin.com/company/pixelmindsconsultancy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  Follow us
+                </a>
+              </div>
+            }
             <div className="mb-2">Business Hours: Mon-Fri 9am-6pm (UK)</div>
             <div className="mb-2">Address: Bristol, UK</div>
             <div className="mb-4">
