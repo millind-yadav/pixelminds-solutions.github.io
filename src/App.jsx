@@ -2,6 +2,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from '@components/layout/Navigation';
 import Footer from '@components/layout/Footer';
 import CookieConsent from '@components/CookieConsent';
+import SectionSeo from '@components/SectionSeo';
 import Hero from '@sections/Hero';
 import About from '@sections/About';
 import Services from '@sections/Services';
@@ -22,6 +23,7 @@ function App() {
     <Router>
       <div className="min-h-screen">
         <Navigation />
+        <SectionSeo />
         <main>
           <Routes>
             <Route

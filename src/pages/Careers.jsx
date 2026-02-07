@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
+import Seo from '@components/Seo';
 
 const roles = [
   {
@@ -18,6 +20,7 @@ const roles = [
 export default function Careers() {
   return (
     <section className="min-h-screen bg-gray-50 py-16 px-4">
+      <Seo title="Careers — PixelMinds Consultancy" description="Open roles at PixelMinds Consultancy. Join our team of technologists and innovators in AI, cloud and web development." url="https://pixelminds.co.uk/careers" />
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl font-bold mb-4">Careers at PixelMinds</h1>
         <p className="mb-8 text-lg text-gray-700">Join our team of innovators and help shape the future of technology consulting.</p>
