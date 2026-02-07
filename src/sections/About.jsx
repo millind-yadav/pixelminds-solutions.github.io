@@ -50,17 +50,26 @@ function About() {
             <AbstractVisual />
           </div>
 
-          {/* Stats Grid */}
-          <div className="grid grid-cols-3 gap-6">
-            {STATS.map((stat, index) => (
-              <AnimatedCounter
-                key={index}
-                end={stat.value}
-                suffix={stat.suffix}
-                label={stat.label}
-              />
-            ))}
-          </div>
+          {/* Stats / Highlights Grid (hidden while empty) */}
+          {STATS && STATS.length > 0 && (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {STATS.map((stat, index) => (
+                stat.value !== undefined ? (
+                  <AnimatedCounter
+                    key={index}
+                    end={stat.value}
+                    suffix={stat.suffix}
+                    label={stat.label}
+                  />
+                ) : (
+                  <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm">
+                    <div className="text-lg font-semibold text-slate-800">{stat.label}</div>
+                    <div className="text-sm text-gray-500 mt-2">{stat.description}</div>
+                  </div>
+                )
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </Section>
